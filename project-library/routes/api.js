@@ -70,18 +70,20 @@ module.exports = function (app) {
     .get(function (req, res) {
       let bookid = req.params.id
       //json res format: {"_id": bookid, "title": book_title, "comments": [comment,comment,...]}
-      Book.findById(bookid).then((book) => {
-        if (!book) {
-          res.send('no book exists')
-        } else {
-          res.json({
-            _id: book._id,
-            title: book.title,
-            comments: book.comments,
-            commentcount: book.comments.length,
-          })
-        }
-      })
+      Book.findById(bookid)
+        .then((book) => {
+          if (!book) {
+            res.send('no book exists')
+          } else {
+            res.json({
+              _id: book._id,
+              title: book.title,
+              comments: book.comments,
+              commentcount: book.comments.length,
+            })
+          }
+        })
+        .catch((err) => { res.send('no book exists') })
     })
 
     .post(function (req, res) {
@@ -107,7 +109,7 @@ module.exports = function (app) {
             })
           }
         })
-        .catch((err) => { })
+        .catch((err) => { res.send('no book exists') })
     })
 
     .delete(function (req, res) {
@@ -122,7 +124,7 @@ module.exports = function (app) {
           }
         })
         .catch((err) => {
-          res.send('error')
+          res.send('no book exists')
         })
     })
 }
