@@ -84,8 +84,8 @@ class SudokuSolver extends Solver {
     row = this.letterToNumber(row);
     let board = this.transform_string2array(puzzleString)
     if (board[this.rowColToIndex(row - 1, col - 1)] == value) return true
-    for (let c = 0; c < 9; ++c) {
-      if (board[this.rowColToIndex(row - 1, c)] == value) return false
+    for (let r = 0; r < 9; ++r) {
+      if (board[this.rowColToIndex(r, col - 1)] == value) return false
     }
     return true
   }
@@ -94,8 +94,8 @@ class SudokuSolver extends Solver {
     row = this.letterToNumber(row);
     let board = this.transform_string2array(puzzleString)
     if (board[this.rowColToIndex(row - 1, col - 1)] == value) return true
-    for (let r = 0; r < 9; ++r) {
-      if (board[this.rowColToIndex(r, col - 1)] == value) return false
+    for (let c = 0; c < 9; ++c) {
+      if (board[this.rowColToIndex(row - 1, c)] == value) return false
     }
     return true
   }
@@ -115,6 +115,9 @@ class SudokuSolver extends Solver {
   }
 
   solve(puzzleString) {
+    let validChars = /^[1-9.]+$/
+    if (!validChars.test(puzzleString)) { return false }
+
     let arrayBoard = this.transform_string2array(puzzleString)
     let solvedAnswer = this.solveSudoku(arrayBoard)
     return solvedAnswer ? this.transform_array2string(solvedAnswer) : false
