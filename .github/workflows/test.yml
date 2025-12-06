@@ -1,0 +1,94 @@
+name: CI Test Projects
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  test-metricimpconverter:
+    name: Metric Converter
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+    - name: Install dependencies
+      working-directory: ./project-metricimpconverter
+      run: npm ci
+    - name: Run tests
+      working-directory: ./project-metricimpconverter
+      run: npm test
+      env:
+        NODE_ENV: test
+
+  test-issuetracker:
+    name: Issue Tracker
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+    - name: Install dependencies
+      working-directory: ./project-issuetracker
+      run: npm ci
+    - name: Run tests
+      working-directory: ./project-issuetracker
+      run: npm test
+      env:
+        NODE_ENV: test
+
+  test-library:
+    name: Library
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+    - name: Install dependencies
+      working-directory: ./project-library
+      run: npm ci
+    - name: Run tests
+      working-directory: ./project-library
+      run: npm test
+      env:
+        NODE_ENV: test
+
+  test-sudoku-solver:
+    name: Sudoku Solver
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+    - name: Install dependencies
+      working-directory: ./project-sudoku-solver
+      run: npm ci
+    - name: Run tests
+      working-directory: ./project-sudoku-solver
+      run: npm test
+      env:
+        NODE_ENV: test
+
+  test-translator:
+    name: English Translator
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+    - name: Install dependencies
+      working-directory: ./project-american-british-english-translator
+      run: npm ci
+    - name: Run tests
+      working-directory: ./project-american-british-english-translator
+      run: npm test
+      env:
+        NODE_ENV: test
