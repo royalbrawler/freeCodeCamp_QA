@@ -20,7 +20,7 @@ suite('Functional Tests', function () {
   /*
   * ----[EXAMPLE TEST]----
   * Each test should completely test the response of the API end-point including response status code!
-  */
+  *
   test('#example Test GET /api/books', function (done) {
     chai.request(server)
       .get('/api/books')
@@ -33,7 +33,7 @@ suite('Functional Tests', function () {
         done();
       });
   });
-  /*
+  *
   * ----[END of EXAMPLE TEST]----
   */
 
