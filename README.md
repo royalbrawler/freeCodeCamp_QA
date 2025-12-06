@@ -1,4 +1,4 @@
-[![Tests](https://github.com/royalbrawler/freeCodeCamp_QA/actions/workflows/test.yml/badge.svg)](https://github.com/royalbrawler/freeCodeCamp_QA/actions/workflows/test.yml) |
+[![Tests](https://github.com/royalbrawler/freeCodeCamp_QA/actions/workflows/test.yml/badge.svg)](https://github.com/royalbrawler/freeCodeCamp_QA/actions/workflows/test.yml)
 # freeCodeCamp
 ## Quality Assurance with Chai
 Using Chai.js, to write tests that describe the program's requirements and see if the program meets them.
