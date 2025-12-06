@@ -1,17 +1,18 @@
+[![Tests](https://github.com/royalbrawler/freeCodeCamp_QA/actions/workflows/test.yml/badge.svg)](https://github.com/royalbrawler/freeCodeCamp_QA/actions/workflows/test.yml) |
 # freeCodeCamp
 ## Quality Assurance with Chai
 Using Chai.js, to write tests that describe the program's requirements and see if the program meets them.
 Assertions, deep equality, truthiness, testing APIs...
 
 ### **Exercises and Projects**
-|                 project                  | Project folder                                | Tests |
-| :--------------------------------------: | --------------------------------------------- | ----- |
-| _\*exercises_ (QA and Testing with Chai) | _boilerplate-mochachai-main_                  | N/A |
-|        Metric-Imperial Converter         | _project-metricimpconverter_                  | [![Metric Converter](https://github.com/royalbrawler/freeCodeCamp_QA/actions/workflows/test.yml/badge.svg?job=test-metricimpconverter)](https://github.com/royalbrawler/freeCodeCamp_QA/actions/workflows/test.yml) |
-|              Issue Tracker               | _project-issuetracker_                        | [![Issue Tracker](https://github.com/royalbrawler/freeCodeCamp_QA/actions/workflows/test.yml/badge.svg?job=test-issuetracker)](https://github.com/royalbrawler/freeCodeCamp_QA/actions/workflows/test.yml) |
-|             Personal Library             | _project-library_                             | [![Library](https://github.com/royalbrawler/freeCodeCamp_QA/actions/workflows/test.yml/badge.svg?job=test-library)](https://github.com/royalbrawler/freeCodeCamp_QA/actions/workflows/test.yml) |
-|              Sudoku Solver               | _project-sudoku-solver_                       | [![Sudoku Solver](https://github.com/royalbrawler/freeCodeCamp_QA/actions/workflows/test.yml/badge.svg?job=test-sudoku-solver)](https://github.com/royalbrawler/freeCodeCamp_QA/actions/workflows/test.yml) |
-|       American British Translator        | _project-american-british-english-translator_ | [![Translator](https://github.com/royalbrawler/freeCodeCamp_QA/actions/workflows/test.yml/badge.svg?job=test-translator)](https://github.com/royalbrawler/freeCodeCamp_QA/actions/workflows/test.yml) |
+|                 project                  | Project folder                                |
+| :--------------------------------------: | --------------------------------------------- |
+| _\*exercises_ (QA and Testing with Chai) | _boilerplate-mochachai-main_                  |
+|        Metric-Imperial Converter         | _project-metricimpconverter_                  |
+|              Issue Tracker               | _project-issuetracker_                        |
+|             Personal Library             | _project-library_                             |
+|              Sudoku Solver               | _project-sudoku-solver_                       |
+|       American British Translator        | _project-american-british-english-translator_ |
 
 ## Installation
 - Clone the repo: git clone (or download the source code from github)
