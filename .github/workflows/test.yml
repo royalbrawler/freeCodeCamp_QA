@@ -1,4 +1,4 @@
-name: CI Test Projects
+name: CI Tests
 
 on:
   push:
@@ -21,7 +21,7 @@ jobs:
       run: npm ci
     - name: Run tests
       working-directory: ./project-metricimpconverter
-      run: npm test
+      run: npm test -- --exit
       env:
         NODE_ENV: test
 
@@ -33,6 +33,10 @@ jobs:
     - uses: actions/setup-node@v4
       with:
         node-version: '18'
+    - name: Start MongoDB
+      uses: supercharge/mongodb-github-action@1.11.0
+      with:
+        mongodb-version: '6.0'
     - name: Install dependencies
       working-directory: ./project-issuetracker
       run: npm ci
@@ -41,6 +45,7 @@ jobs:
       run: npm test
       env:
         NODE_ENV: test
+        MONGODB_URI: mongodb://127.0.0.1:27017
 
   test-library:
     name: Library
@@ -50,6 +55,10 @@ jobs:
     - uses: actions/setup-node@v4
       with:
         node-version: '18'
+    - name: Start MongoDB
+      uses: supercharge/mongodb-github-action@1.11.0
+      with:
+        mongodb-version: '6.0'
     - name: Install dependencies
       working-directory: ./project-library
       run: npm ci
@@ -58,6 +67,7 @@ jobs:
       run: npm test
       env:
         NODE_ENV: test
+        MONGODB_URI: mongodb://127.0.0.1:27017
 
   test-sudoku-solver:
     name: Sudoku Solver
